@@ -5,7 +5,7 @@ import pickle
 
 
 # Load Model
-with open(r"D:\RESUME PROJECT\Diabetes Prediction\final_model.pkl", 'rb') as file:
+with open("final_model.pkl", 'rb') as file:
     loaded_model = pickle.load(file)
 
 # Define valid pages
