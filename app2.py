@@ -5,8 +5,15 @@ import pickle
 
 
 # Load Model
-with open("final_model.pkl", 'rb') as file:
-    loaded_model = pickle.load(file)
+import os
+
+model_path = "final_model.pkl"
+
+if os.path.exists(model_path):
+    with open(model_path, 'rb') as file:
+        loaded_model = pickle.load(file)
+else:
+    st.error("Model file not found! Please upload 'final_model.pkl' to your repository.")
 
 # Define valid pages
 valid_pages = ["Home", "Diabetes Prediction", "About Diabetes", "Data Insights", "Contact"]
